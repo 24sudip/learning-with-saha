@@ -45,6 +45,9 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Models\{AboutItem, Subcategory, Slider, AboutTab, Coupon};
 use Carbon\Carbon;
 use Illuminate\Contracts\Session\Session as SessionSession;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\SslCommerzPaymentController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,7 +58,8 @@ use Illuminate\Contracts\Session\Session as SessionSession;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
- */
+*/
+
 //Auth
 Route::get('/register', [FrontendController::class, 'register'])->name('রেজিস্ট্রেশন করুন');
 Route::get('/login', [FrontendController::class, 'login'])->name('লগইন করুন');
